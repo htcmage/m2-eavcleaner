@@ -21,7 +21,7 @@
             "registration.php"
         ],
         "psr-4": {
-          "EAVCleaner\\": "app/code/EAVCleaner/"
+            "HTCMage\\EAVCleaner\\": ""
         }
     }
 }

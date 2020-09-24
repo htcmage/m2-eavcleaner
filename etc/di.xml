@@ -3,7 +3,6 @@
     <type name="Magento\Framework\Console\CommandList">
         <arguments>
             <argument name="commands" xsi:type="array">
-                <item name="hello_world" xsi:type="object">HTCMage\EAVCleaner\Console\Command\HelloWorldCommand</item>
                 <item name="attributes:restore-use-default-value" xsi:type="object">HTCMage\EAVCleaner\Console\Command\RestoreUseDefaultValueCommand</item>
                 <item name="config:restore-use-default-value" xsi:type="object">HTCMage\EAVCleaner\Console\Command\RestoreUseDefaultConfigValueCommand</item>
                 <item name="media:remove-unused" xsi:type="object">HTCMage\EAVCleaner\Console\Command\RemoveUnusedMediaCommand</item>
