@@ -1,7 +1,7 @@
 {
     "name": "htcmage/m2-eavcleaner",
     "description": "Remove unused images, remove unused eav",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "type": "magento2-module",
     "license": "MIT",
     "authors": [
