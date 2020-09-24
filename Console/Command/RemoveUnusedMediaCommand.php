@@ -44,7 +44,7 @@ class RemoveUnusedMediaCommand extends Command
             }
         }
 
-        $table = array();
+        $table = [];
         $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
         $filesystem = $objectManager->get('Magento\Framework\Filesystem');
         $directory = $filesystem->getDirectoryRead(DirectoryList::MEDIA);
@@ -63,9 +63,9 @@ class RemoveUnusedMediaCommand extends Command
 
             $filePath = str_replace($imageDir, "", $file);
             if (empty($filePath)) continue;
-            $value = $coreRead->fetchOne('SELECT value FROM ' . $mediaGallery . ' WHERE value = ?', array($filePath));
+            $value = $coreRead->fetchOne('SELECT value FROM ' . $mediaGallery . ' WHERE value = ?', [$filePath]);
             if ($value == false) {
-                $row = array();
+                $row = [];
                 $row[] = $filePath;
                 $table[] = $row;
                 $filesize += filesize($file);
@@ -81,7 +81,7 @@ class RemoveUnusedMediaCommand extends Command
             }
         }
 
-        $headers = array();
+        $headers = [];
         $headers[] = 'filepath';
         $this->getHelper('table')
             ->setHeaders($headers)
